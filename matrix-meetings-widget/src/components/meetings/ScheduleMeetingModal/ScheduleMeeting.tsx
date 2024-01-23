@@ -335,8 +335,8 @@ export const ScheduleMeeting = ({
       onMeetingChange({
         title: title.trim(),
         description,
-        startTime: startDate.toISO(),
-        endTime: endDate.toISO(),
+        startTime: startDate.toISO() as string,
+        endTime: endDate.toISO() as string,
         participants,
         powerLevels,
         widgetIds: widgets,

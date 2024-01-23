@@ -43,9 +43,9 @@ export const MeetingsToolbarDatePicker = ({
     <>
       {view === 'list' && (
         <DateRangePicker
-          endDate={endDate}
+          endDate={endDate as string}
           onRangeChange={onRangeChange}
-          startDate={startDate}
+          startDate={startDate as string}
           sx={sx}
         />
       )}

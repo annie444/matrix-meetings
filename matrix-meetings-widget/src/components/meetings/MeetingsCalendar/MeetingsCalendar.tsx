@@ -249,8 +249,10 @@ function generateFilters(filters: Filters, view: CalendarViewType): Filters {
       ...filters,
       startDate: DateTime.fromISO(filters.startDate)
         .minus({ weeks: 1 })
-        .toISO(),
-      endDate: DateTime.fromISO(filters.endDate).plus({ weeks: 1 }).toISO(),
+        .toISO() as string,
+      endDate: DateTime.fromISO(filters.endDate)
+        .plus({ weeks: 1 })
+        .toISO() as string,
     };
   }
 

@@ -107,8 +107,8 @@ export const SetupBreakoutSessions = ({
     } else {
       onBreakoutSessionsChange({
         description,
-        startTime: startDate.toISO(),
-        endTime: endDate.toISO(),
+        startTime: startDate.toISO() as string,
+        endTime: endDate.toISO() as string,
         widgetIds: widgets,
         groups: groups.map((group) => ({
           title: group.title,

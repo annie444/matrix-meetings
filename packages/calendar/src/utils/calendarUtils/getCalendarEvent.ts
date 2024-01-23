@@ -84,12 +84,12 @@ export function getCalendarEvent(
       calendar: relatedCalendar,
       // only consider events that match the override
       // entry OR include the recurrenceId
-      fromDate: overrideEntry
+      fromDate: (overrideEntry
         ? parseICalDate(overrideEntry.dtstart).toISO()
-        : recurrenceId,
-      toDate: overrideEntry
+        : recurrenceId) as string,
+      toDate: (overrideEntry
         ? parseICalDate(overrideEntry.dtend).toISO()
-        : recurrenceId,
+        : recurrenceId) as string,
     });
 
     // We might find multiple overlapping meetings and
@@ -100,7 +100,7 @@ export function getCalendarEvent(
   // find the next entry from now (or current, or first)
   [entry] = calculateCalendarEvents({
     calendar: relatedCalendar,
-    fromDate: DateTime.now().toISO(),
+    fromDate: DateTime.now().toISO() as string,
     limit: 1,
   });
 
@@ -113,7 +113,7 @@ export function getCalendarEvent(
         calendar: relatedCalendar,
         // meeting end is exclusive, therefore we need to adjust our search
         // space a bit
-        fromDate: calendarEnd.minus({ milliseconds: 1 }).toISO(),
+        fromDate: calendarEnd.minus({ milliseconds: 1 }).toISO() as string,
         limit: 1,
       });
     }

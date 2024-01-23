@@ -24,7 +24,7 @@ export function normalizeCalendarEntry(
 ): CalendarEntry {
   const events = calculateCalendarEvents({
     calendar: [calendarEntry],
-    fromDate: parseICalDate(calendarEntry.dtstart).toISO(),
+    fromDate: parseICalDate(calendarEntry.dtstart).toISO() as string,
     limit: 1,
   });
 

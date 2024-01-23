@@ -37,8 +37,8 @@ export const generateFilterRange = (
   if (view === 'day') {
     const startDate = referenceDate.startOf('day');
     return {
-      startDate: startDate.toISO(),
-      endDate: startDate.endOf('day').toISO(),
+      startDate: startDate.toISO() as string,
+      endDate: startDate.endOf('day').toISO() as string,
     };
   }
 
@@ -54,8 +54,8 @@ export const generateFilterRange = (
     }
 
     return {
-      startDate: startDate.toISO(),
-      endDate: startDate.plus({ days: 6 }).endOf('day').toISO(),
+      startDate: startDate.toISO() as string,
+      endDate: startDate.plus({ days: 6 }).endOf('day').toISO() as string,
     };
   }
 
@@ -68,16 +68,16 @@ export const generateFilterRange = (
     }
 
     return {
-      startDate: startDate.toISO(),
-      endDate: startDate.plus({ days: 4 }).endOf('day').toISO(),
+      startDate: startDate.toISO() as string,
+      endDate: startDate.plus({ days: 4 }).endOf('day').toISO() as string,
     };
   }
 
   if (view === 'month') {
     const startDate = referenceDate.startOf('month');
     return {
-      startDate: startDate.toISO(),
-      endDate: referenceDate.endOf('month').toISO(),
+      startDate: startDate.toISO() as string,
+      endDate: referenceDate.endOf('month').toISO() as string,
     };
   }
 

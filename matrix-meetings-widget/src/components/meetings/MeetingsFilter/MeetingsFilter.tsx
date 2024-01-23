@@ -70,8 +70,8 @@ export const MeetingsFilter = ({
   useEffect(() => {
     onFiltersChange((oldFilters) => {
       const newFilters = {
-        startDate: fromDate.toISO(),
-        endDate: toDate.toISO(),
+        startDate: fromDate.toISO() as string,
+        endDate: toDate.toISO() as string,
         filterText,
       };
 
@@ -101,9 +101,9 @@ export const MeetingsFilter = ({
   return (
     <Stack spacing={1}>
       <DateRangePicker
-        endDate={toDate.toISO()}
+        endDate={toDate.toISO() as string}
         onRangeChange={handleOnRangeChange}
-        startDate={fromDate.toISO()}
+        startDate={fromDate.toISO() as string}
       />
 
       <TextField

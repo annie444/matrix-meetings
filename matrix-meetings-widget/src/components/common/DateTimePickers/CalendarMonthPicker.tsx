@@ -48,7 +48,10 @@ export const CalendarMonthPicker = ({
     (value: DateTime | null) => {
       if (value?.isValid) {
         const date = value.toISO();
-        const { startDate, endDate } = generateFilterRange('month', date);
+        const { startDate, endDate } = generateFilterRange(
+          'month',
+          date as string,
+        );
         onRangeChange(startDate, endDate);
       }
     },

@@ -55,7 +55,10 @@ export const CalendarWeekPicker = ({
     (value: DateTime | null) => {
       if (value?.isValid) {
         const date = value.toISO();
-        const { startDate, endDate } = generateFilterRange('week', date);
+        const { startDate, endDate } = generateFilterRange(
+          'week',
+          date as string,
+        );
         onRangeChange(startDate, endDate);
         onClose();
       }

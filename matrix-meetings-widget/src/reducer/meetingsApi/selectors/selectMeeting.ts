@@ -154,7 +154,7 @@ function generateDeletionTime(
   if (meetingMetadataEvent.content.force_deletion_at) {
     return DateTime.fromMillis(
       meetingMetadataEvent.content.force_deletion_at,
-    ).toISO();
+    ).toISO() as string;
   }
 
   return undefined;

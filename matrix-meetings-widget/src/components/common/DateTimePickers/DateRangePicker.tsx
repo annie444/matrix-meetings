@@ -55,9 +55,12 @@ export const DateRangePicker = ({
     (value: DateTime | null) => {
       if (value?.isValid) {
         if (!selectedStartDate) {
-          setSelectedStartDate(value.startOf('day').toISO());
+          setSelectedStartDate(value.startOf('day').toISO() as string);
         } else {
-          onRangeChange(selectedStartDate, value.endOf('day').toISO());
+          onRangeChange(
+            selectedStartDate,
+            value.endOf('day').toISO() as string,
+          );
           setSelectedStartDate(undefined);
           setOpen(false);
         }

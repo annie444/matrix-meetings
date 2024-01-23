@@ -55,7 +55,7 @@ export const moveFilterRange = (
 
   if (view === 'list') {
     return {
-      startDate: startDateTime.toISO(),
+      startDate: startDateTime.toISO() as string,
       endDate: startDateTime
         .plus({
           days:
@@ -63,9 +63,9 @@ export const moveFilterRange = (
             direction === 'today' ? 6 : days - 1,
         })
         .endOf('day')
-        .toISO(),
+        .toISO() as string,
     };
   }
 
-  return generateFilterRange(view, startDateTime.toISO());
+  return generateFilterRange(view, startDateTime.toISO() as string);
 };

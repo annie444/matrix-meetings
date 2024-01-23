@@ -31,10 +31,10 @@
       "state_key": "jitsi",
       "content": {
         "type": "jitsi",
-        "url": "https://app.element.io/jitsi.html?confId={{#encodeURIComponent}}{{base32_room_id}}{{/encodeURIComponent}}#conferenceId=$conferenceId&domain=$domain&isAudioOnly=$isAudioOnly&displayName=$matrix_display_name&avatarUrl=$matrix_avatar_url&userId=$matrix_user_id&roomId=$matrix_room_id&roomName=$roomName&theme=$theme{{#data.auth}}&auth={{data.auth}}{{/data.auth}}",
+        "url": "https://chat.jpeg.gay/jitsi.html?confId={{#encodeURIComponent}}{{base32_room_id}}{{/encodeURIComponent}}#conferenceId=$conferenceId&domain=$domain&isAudioOnly=$isAudioOnly&displayName=$matrix_display_name&avatarUrl=$matrix_avatar_url&userId=$matrix_user_id&roomId=$matrix_room_id&roomName=$roomName&theme=$theme{{#data.auth}}&auth={{data.auth}}{{/data.auth}}",
         "name": "Video Conference",
         "data": {
-          "domain": "meet.jit.si",
+          "domain": "meet.mayfirst.org",
           "conferenceId": "{{base32_room_id}}",
           "roomName": "{{title}}",
           "isAudioOnly": true

@@ -48,7 +48,10 @@ export const CalendarDayPicker = ({
     (value: DateTime | null) => {
       if (value?.isValid) {
         const date = value.toISO();
-        const { startDate, endDate } = generateFilterRange('day', date);
+        const { startDate, endDate } = generateFilterRange(
+          'day',
+          date as string,
+        );
         onRangeChange(startDate, endDate);
       }
     },
